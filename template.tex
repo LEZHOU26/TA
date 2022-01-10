@@ -1,0 +1,220 @@
+%########################################
+% Template in latex for classroom assignments and project report
+% 
+%
+% Author: Vishal Sharma
+%
+% Use xelatex compiler 
+%########################################
+
+
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt,oneside,fleqn]{article}
+
+
+% Often used text to commands
+\newcommand{\clr}{gray!60}
+\newcommand{\gray}{\textcolor{gray!60}}
+\newcommand{\name}{Le Zhou}
+\newcommand{\class}{\gray {Le Zhou}}
+\newcommand{\hwnumber}{\gray {}}
+\newcommand{\aNum}{A01}
+\newcommand{\hw}{\gray {Sensior Design 4013}}
+
+
+
+% All packages
+\usepackage{amssymb,amsthm,amsmath,enumerate,fancyhdr,graphicx,tabularx}
+\usepackage{microtype}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{mathpazo}
+\usepackage{mdframed}
+\usepackage{parskip}
+\usepackage{fontspec} 
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{lipsum}  % generates filler text
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=orange,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=cyan,
+}
+\linespread{1.1} 
+
+
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage[utf8]{inputenc}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+\usepackage{fontspec}
+\setmainfont{Linux Libertine O}
+\setsansfont{Linux Biolinum O}
+%\setmonofont{Inconsolata}
+
+% Frame for Problem Statement definition
+%\newenvironment{problem}[1]
+%{\begin{mdframed}
+%		\textbf{\textsc{Project Objectives:}}
+%}
+%{\end{mdframed}}
+
+
+
+% Environment for Solution definition
+
+
+% header and footer content
+\pagestyle{fancy}
+\lhead{\hw {\hwnumber}}
+\chead{}
+\rhead{\class}
+\cfoot{}
+
+
+% Header line with color gray!60
+\renewcommand{\headrulewidth}{0.0pt}% 2pt header rule
+\setlength{\headsep}{1.5cm}
+
+
+\pgfplotsset{compat=1.16}
+% Document 
+
+
+\title{
+{\includegraphics[width=0.5\textwidth]{./images/Oklahoma_State_University_Sign.png}}\\
+{\large \textbf{General Introduction for Senior Design Ordering }}\\
+}
+\author{Instructor: Nate Lannan \\
+        TA        : Le Zhou}
+\date{\today}
+	
+\begin{document}
+
+\rfoot{\gray \thepage}
+
+\maketitle
+
+\tableofcontents
+\newpage
+\newpage
+Due to the particularity of the senior design, students need to decide on their own the electronic components they need. So we made a systematic introduction on how to buy components.
+\section{Items Ordering}
+First, we introduce some common the ways you buy electronic components. Based on the \textbf{ OSU system and ECE system}, there are two ways for you to get your items: OK corral system and P-card. 
+\subsection{OK corral}
+OK corral system is a platform that integrates all kinds of online shopping websites. In the process of making your graduation design, you will often use \url{Mouser.com}, \url{Newegg.com}, and \url{Digikey.com}. On the OK corral system, orders will be sent to a college office. The stuffs who work there will achieve your order. Normally, it will take 3-4 days to receive your order after you send your order to the TA.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/Picture1.png}
+    \caption{Ok corral website.}
+    \label{okcorral}
+\end{figure} \vspace{-5mm}
+\subsection{P-card}
+P-card refers to directly purchasing the required components through ECE department. This method is suitable for websites that cannot be found on okcorral, such as \url{amazon.com}.
+\section{Documents Sending}
+After you have decided on the components you want to buy, you need to fill in the required components in a specific form (Student\_Online\_Order\_Form.xlsx) and then send it to the teaching assistant. The form can be found on your Canvas.
+\subsection{Fill In}
+You will see some lists in the Student\_Online\_Order\_Form. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/figure2.png}
+    \caption{Student\_Online\_Order\_Form.}
+\end{figure} \vspace{-5mm}
+It's easy to understand the meaning of first four lines. The next five lines to fill in are related to the item to be bought. Here I use a component on \url{Mouser.com} as a sample.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.98\textwidth]{images/figure3.png}
+    \caption{Information on Mouser.com.}
+\end{figure} \vspace{-5mm}
+After finding the required information on the form, please fill in the corresponding information in the corresponding position (Figure 4)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/figure4.png}
+    \caption{Information fill in the form.com.}
+\end{figure} \vspace{-5mm}
+\subsection{Sending}
+To send your orders to the TA, please change the file name to \textcolor{red}{team\#\_MM\_DD.xlsx}. And, if any orders are required, please send them to the teaching assistant by \textcolor{teal}{12 noon on Thursdays each week}. As a result, the TA will be able to sort through the orders and deliver them to the school on Thursday afternoon and evening. You will be able to receive the necessary components the following Monday or Tuesday.
+\section{Item Receiving}
+Since there will be multiple groups of orders arriving at the same time, it takes about half a day for the TA and the storeroom clerk to group the arriving components. Components of each group will be put in different containers and attach labels. When you receive the email, you can make an appointment with the storeroom clerk, and then go to the storage room to take away the components.
+
+\textcolor{teal}{Note: when you get the components of your team, the storeroom clerk/TA will ask everyone to write down the removed items and leave a signature for verification and error correction.}
+
+If you have any questions please contact the instructor/TA. \{nate.lannan@okstate.edu\}/ \{le.zhou@okstate.edu\}
+%	\centering
+%	{
+%	\textcolor{black!70}{
+ %   \large \name\\
+%	A20108447\\}
+%	}
+	% Define foot name after intro page
+%	\lfoot{\gray \name}
+
+	% Intro Page Ends
+
+
+	
+	%\subsection*{\textsc{Task 1: Now that we've discussed prominence, and you've given your first presentation, what have you learned about your own speech in these areas?}}
+	%To emphasize a word in the sentence, we have several strategies:
+    %First, we can add a short pause after the words that need to be highlighted.
+    %Second, we can stress the word when it contains information that the other person wants to understand or you want to emphasize.
+    %Last but not least, we can repeatedly mention the words we want to emphasize.
+
+    %\rule{\textwidth}{.2mm}
+    
+    
+    %\subsection*{\textsc{Task 1: What elements of this course have you found helpful? Which have you found less helpful?}}
+    %I think the in class presentation is the most useful one.\\
+    %Presentations in class can force us to do after-class exercises, which are often lacking in international students. In fact, we should not be afraid to spend time on languages other than research. On the contrary, we should actively squeeze time to communicate with others and learn from our daily communications.\\
+    %I think the number of presentations this semester is good enough for me.
+    %\subsection*{\textsc{Task 1: Is there anything you'd like me to know before I teach this course again?}}
+    %No, everything is prefect, if you want to learn \textit{Latex}, I upload this template on my google drive and suggest you to use \textbf{Overleaf}.\\
+    %https://drive.google.com/file/d/1wwKsGscC1A3cChcfdstSqwsTZEe8PrEz/view?usp=sharing
+    
+   % \subsection*{\textsc{Is there anything about being an ITA that you wish you'd known before taking the exam and/or enrolling in this course?}}
+    %I think I can learn what I need in the future progress.
+
+
+
+
+
+
+    %\subsection*{\textsc{Task 3: How have you practiced pronunciation (segmental concerns)?}}
+    %For the segmentation: I will write the sentence down and divide it into several thought groups and give a PAUSE at the end of thought groups.\\
+    %For notation: By listening carefully to a recorded conversation (YouTube is a good place to start), I begin noticing how other speakers use intonation to express themselves.\\
+    %For vocabulary: Google is always a good teacher. And collecting some specific vocabulary in the sheet is a good habit to increase vocabulary.\\
+    %\subsection*{\textsc{Task 4: How have you practiced thought groups?}}
+    %\textsl{Pause} and \textsl{Prominence} are tools used to practiced thought groups. Write the sentence down and identify the most likely thought group boundaries, and the focus word in each thought group, and give a pause at the end of thought groups, and add prominence for some key words to highlight the different parts as thought groups.
+    %\subsection*{\textsc{Task 5: How have you practiced intonation facts like prominence or intonation?}}
+    %Watching movies and following the lines in the movies.\\
+    %Find the key words of the thought groups, and use prominence for them.
+    %\subsection*{\textsc{What features of your own spoken English have you identified that you could strengthen to improve comprehensibility?}}
+    
+    %\subsection*{\textsc{Task 2: Also give yourself a number rating in each category. Be sure to use the criteria next to each band (e.g. some errors in comprehensibility).}}
+    %\subsection*{\textsc{Task 3: In addition to these prominence issues, what's one other specific language feature you've noticed that you may struggle with?}}
+    
+    %\subsubsection*{A segmental feature (e.g. /v/ vs /w/)?}
+    %I think /i and /I always confuse me.
+    %\subsubsection*{A suprasegmental feature (too quiet, thought groups too long, struggles with pitch)?}
+	%I think thought groups too long may be a problem for me. And I notice that I used too much "emmm" in the presentation, may be it is caused by unskilled spoken language
+	% Audio Classification 
+	
+\end{document}
+
+
+
